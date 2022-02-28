@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e973e9ffa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        html::-webkit-scrollbar{
+            width: 0.7vw;
+        }
+        html::-webkit-scrollbar-thumb{
+            background-color: #7EC9F5;
+        }
+        html::-webkit-scrollbar-track{
+            background-color: #1f2736;
+        }
+        body{
+            font-size: 2vmax;
+            background-color: #171C26;
+            color: white;
+        }
+        #main-container{
+            padding-top: 10vmax;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #nav-bar{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-bottom: 0.5vmin;
+            position: fixed;
+            width: 100%;
+            height: auto;
+            background-color: #2d4b83;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #nav-tabs{
+            display: flex;
+        }
+        a{
+            font-size: 15px;
+            color: white;
+            padding-left: 5vmax;
+            padding-right: 2vmin;
+        }
+        a:hover{
+            transform: scale(1.1);
+        }
+        #button-div{
+            background-color: #FFB647;
+            color: black;
+            font-size: 2vmax;
+            font-family: 'Bebas Neue', cursive;
+            padding: 0px 2vmax 0px 2vmax;
+            border-radius: 12px;
+            font-size: 3vmax;
+        }
+        #button-div:hover{
+            transform: scale(1.1);
+        }
+        #email-input{
+            border-radius: 7px;
+            width: 50vmax;
+            height: 5vmax;
+        }
+        #iframe-container{
+            padding-top: 5vh;
+            
+        }
+        #iframe-container:hover{
+            
+            transform: scale(1.1) ;
+            
+        }
+        
+        #icon{
+            font-size: 80px;
+            padding-right: 5vmax;
+            padding-left: 2vmax;
+            padding-top: 1vmax;
+            padding-bottom: 1vmax;
+        }
+        #details-container{
+            border-radius: 5px;
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 15px;
+            border-style: solid;
+            border-color: #09C0FA;
+        }
+        #details-container:hover{
+            animation-name: hover-animation;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            
+        }
+        #details-container-1{
+            border-radius: 5px;
+            width: 800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 15px;
+            border-style: solid;
+            border-color: #09C0FA;
+        }
+        #details-container-1:hover{
+            animation-name: hover-animation;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            
+        }
+        @keyframes hover-animation {
+            100%{
+                border-style: solid;
+                border-color: #002164;
+                border-width: 3px;
+                background-color: #09C0FA;
+                transform: scale(1.03);
+            }
+        }
+
+        #price-container{
+            text-align: center;
+            padding-top: 10vmax;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #price-box{
+            position: relative;
+            border-radius: 15px;
+            width: 220px;
+            height: 250px;
+            background-color: #09C0FA;
+            padding: 10px 10px 10px 10px;
+            margin: 10px 10px 10px 10px;
+        }
+
+        @media (max-width: 770px){
+            #icon{
+            font-size: 10vmax;
+            padding-right: 5vmax;
+            padding-left: 2vmax;
+            padding-top: 1vmax;
+            padding-bottom: 1vmax;
+        }
+            #details-container{
+            border-radius: 5px;
+            width: 90vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 2vh;
+            border-style: solid;
+            border-color: #09C0FA;
+        }
+            #details-container-1{
+            border-radius: 5px;
+            width: 90vw;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 2vh;
+            border-style: solid;
+            border-color: #09C0FA;
+        }
+            #price-container{
+            display: flex;
+            flex-direction: column;
+        }
+            #price-box{
+                margin-bottom: 30px;
+            }
+    }
+        @media (min-width: 820px){
+            #price-container{
+                display: flex;
+                flex-direction: row;
+            }
+            #price-box{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                font-size: 15px;
+                border-radius: 15px;
+                background: repeating-linear-gradient(0deg,#09C0FA,#7EC9F5);
+                padding: 10px 10px 10px 10px;
+                margin: 0px 20px 10px 20px;
+            }
+        }
+
+        
+        #price-heading{
+            font-size: 30px;
+            font-family: 'Bebas Neue', cursive;
+            align-self: flex-start;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+        #price-button-div{
+            background-color: #FFB647;
+            color: black;
+            font-family: 'Bebas Neue', cursive;
+            padding: 0px 2vmax 0px 2vmax;
+            margin-top: 5px;
+            border-radius: 12px;
+            font-size: 22px;
+        }
+        #price-box:hover{
+            border-style: solid;
+            border-color: #FFB647;
+            animation-name: price-box-animation;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes price-box-animation {
+            0%{
+                bottom: 0px;
+            }
+            100%{
+                bottom: 25px;
+                transform: scale(1.05);
+            }
+        }
+        #bottom{
+            width: 100%;
+            background-color: #1f2736;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="nav-bar">
+        <h1 style="padding-left: 3vmax; font-size: 25px;">Logo</h1>
+        <div id="nav-tabs">
+            <a href="#details-container-1">Features</a>
+            <a href="#iframe-container">Sound Compasrison</a>
+            <a href="#price-container">Pricing</a>
+        </div>
+    </div>
+    <div id="main-container">
+        <h2 style="font-size: 5vmax;">Premiun Quality Keyboards</h2>
+        <br>
+        <input id="email-input" type="text" placeholder="&nbsp; Enter Your Email">
+        <br>
+        <div id="button-div">
+            <h2>Get Started!</h2>
+        </div>
+        <br>
+        
+        <div id="details-container-1">
+            <i id="icon" class="fas fa-keyboard"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores hic accusantium veniam porro culpa, nihil pariatur quibusdam ipsum libero odio a nemo autem et in laboriosam doloremque voluptates? Sunt.</p>
+        </div>
+        <br>
+        <div id="details-container">
+            <i style="font-size: 70px;" id="icon" class="fas fa-truck"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores hic accusantium veniam porro culpa, nihil pariatur quibusdam ipsum libero odio a nemo autem et in laboriosam doloremque voluptates? Sunt.</p>
+        </div>
+        <br>
+        <div id="details-container">
+            <i id="icon" class="fas fa-money-check-alt"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores hic accusantium veniam porro culpa, nihil pariatur quibusdam ipsum libero odio a nemo autem et in laboriosam doloremque voluptates? Sunt.</p>
+        </div>
+        <br>
+        <h2>Sound comparison of different types of keys</h2>
+        <div id="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rm-WuK_9OBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="price-container">
+            <div id="price-box">
+                <h3 id="price-heading">B r o w n &nbsp;&nbsp; S w i t c h</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, nostrum voluptatum? Aspernatur a nisi aperiam maxime, excepturi quisquam impedit! Necessitatibus repellat nulla fugit qui nihil voluptas commodi exercitationem amet magnam!</p>
+                <div id="price-button-div">
+                    <h2>Select</h2>
+                </div>
+            </div>
+            <div id="price-box">
+                <h3 id="price-heading">R e d &nbsp;&nbsp; S w i t c h</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, nostrum voluptatum? Aspernatur a nisi aperiam maxime, excepturi quisquam impedit! Necessitatibus repellat nulla fugit qui nihil voluptas commodi exercitationem amet magnam!</p>
+                <div id="price-button-div">
+                    <h2>Select</h2>
+                </div>
+            </div>
+            <div id="price-box">
+                <h3 id="price-heading">B l u e &nbsp;&nbsp; S w i t c h</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, nostrum voluptatum? Aspernatur a nisi aperiam maxime, excepturi quisquam impedit! Necessitatibus repellat nulla fugit qui nihil voluptas commodi exercitationem amet magnam!</p>
+                <div id="price-button-div">
+                    <h2>Select</h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="bottom">
+            <p style="padding: 5px 0px 5px 0px;"><i class="fa fa-copyright" aria-hidden="true"></i> Copyright Details</p>
+            <div>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contacts</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
+ 
+
